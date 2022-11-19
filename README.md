@@ -3,11 +3,14 @@
 How to use:
 
 ~~~
-docker build -t poetrybug .
+docker build --build-arg VERSION=1.1.14 -t poetrybug .
+docker run --rm -it poetrybug
+
+docker build --build-arg VERSION=1.2.0 -t poetrybug .
 docker run --rm -it poetrybug
 ~~~
 
-This is a repo to reproduce following error:
+This is a repo to reproduce following error on version 1.1.14:
 
 ~~~
 Traceback (most recent call last):
